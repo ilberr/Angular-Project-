@@ -7,4 +7,6 @@ The project is to develop a front-end app that displays :
   - a link to orders list
   - a contact form
 
-List are loaded from static json files stored in the backend.
+List are loaded from static json files stored in the backend. ( Json server )
+
+
