@@ -1,0 +1,7 @@
+    <ul class="tilesWrap"  *ngFor="let currentUser of users">
+        <a routerLink="/users/{{currentUser.id}}" routerLinkActive="active">
+        <li>
+            <!--<h2>{{ currentUser.id }}</h2>-->
+            <h3>{{ currentUser.name }}</h3>
+        </li></a>
+    </ul>

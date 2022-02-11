@@ -1,0 +1,18 @@
+<ul class="tilesWrap">
+    <li>
+        <h2>{{ OrderProp.id }}</h2>
+		<h3>{{ OrderProp.name }}</h3>
+		<p>
+			Delivery date :{{ OrderProp.delivery }} 
+		</p>
+        <br>
+        <p>
+			Client id: {{ OrderProp.client }} 
+		</p>
+        <br>
+        <p *ngIf="OrderProp.arrival">
+            Arrival date: {{ OrderProp.arrival }}
+        </p>
+        </li>
+        
+    </ul>

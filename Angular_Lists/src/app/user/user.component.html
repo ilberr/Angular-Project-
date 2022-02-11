@@ -1,0 +1,27 @@
+<style>
+    table, th, td {
+      border: solid rgb(3, 48, 2);
+    }
+    </style>
+
+<ul class="tilesWrap">
+    <li>
+        <h2>{{ userProp.id }}</h2>
+		<h3>{{ userProp.name }}  {{ userProp.lastname }} </h3>
+		<p>
+            {{userProp.description}}
+		</p>
+        </li>
+    <!--<div *ngIf="nextId<n+1">
+    <a routerLink="/users/{{nextId}}" routerLinkActive="active" (click)="this.ngOnInit()">
+        <li><p>Suivant</p></li>
+    </a>
+    </div>
+    <div *ngIf="previousId<n && previousId!=0">
+        <a routerLink="/users/{{previousId}}" routerLinkActive="active" (click)="this.ngOnInit()">
+            <li><p>Previous</p></li>
+        </a>
+        </div>-->
+    </ul>
+<ul>
+</ul>

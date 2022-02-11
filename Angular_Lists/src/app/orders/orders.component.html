@@ -1,0 +1,9 @@
+
+    <ul class="tilesWrap"  *ngFor="let currentOrder of orders">
+        <a routerLink="/orders/{{currentOrder.id}}" routerLinkActive="active">
+        <li>
+            <!--<h2>{{ currentOrder.id }}</h2>-->
+            <h3>{{ currentOrder.name }}</h3>
+        </li></a>
+    </ul>
+    

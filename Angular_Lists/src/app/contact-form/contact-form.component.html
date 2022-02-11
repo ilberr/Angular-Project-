@@ -1,0 +1,52 @@
+ 
+ 
+ <div class="login-box">
+    <h2>Contact Us</h2>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('service_qvkdkuo');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_qvkdkuo', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" id="contact-form">
+        <div class="user-box">
+        <label for="first-name"> </label>
+        <input id="first-name" type="text" formControlName="firstName" placeholder="First Name">    
+      </div>
+      <div class="user-box">
+        <label for="last-name"></label>
+        <input id="last-name" type="text" formControlName="lastName" placeholder="Last Name">
+      </div>
+      <div class="user-box">
+        <label for="email"></label>
+        <input id="email" type="email" formControlName="email" placeholder="Email">
+      </div>
+
+      <div class="user-box">
+        <textarea rows = "5" formControlName="comment" cols = "40" name = "description">
+            Enter details here...
+         </textarea><br>
+      </div>
+      <p>Form Status: {{ profileForm.status }}</p>
+
+      <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+    </form>
+    <p class="alert alert-success" *ngIf="this.sent==true">Message Sent!</p>
+  </div>

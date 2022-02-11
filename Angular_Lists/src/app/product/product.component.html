@@ -1,0 +1,14 @@
+
+<ul class="tilesWrap">
+    <li>
+        <h2>{{ productProp.id }}</h2>
+		<h3>{{ productProp.name }}</h3>
+		<p>
+			{{ productProp.price }} Euros 
+		</p>
+        <p *ngIf="productProp.discount">
+            Discount !! {{ productProp.discount }} !!
+        </p>
+        </li>
+        
+    </ul>

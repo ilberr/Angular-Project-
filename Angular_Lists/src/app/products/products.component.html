@@ -1,0 +1,9 @@
+<!--<app-product *ngFor="let currentProduct of products" [productProp]="currentProduct">-->
+    <ul class="tilesWrap"  *ngFor="let currentProduct of products">
+        <a routerLink="/products/{{currentProduct.id}}" routerLinkActive="active">
+        <li>
+            <!--<h2>{{ currentProduct.id }}</h2>-->
+            <h3>{{ currentProduct.name }}</h3>
+        </li></a>
+    </ul>
+    
